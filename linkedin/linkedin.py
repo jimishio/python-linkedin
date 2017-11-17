@@ -20,15 +20,10 @@ from .utils import enum, to_utf8, raise_for_error, json, StringIO
 __all__ = ['LinkedInAuthentication', 'LinkedInApplication', 'PERMISSIONS']
 
 PERMISSIONS = enum('Permission',
-                   COMPANY_ADMIN='rw_company_admin',
-                   BASIC_PROFILE='r_basicprofile',
-                   FULL_PROFILE='r_fullprofile',
-                   EMAIL_ADDRESS='r_emailaddress',
-                   NETWORK='r_network',
-                   CONTACT_INFO='r_contactinfo',
-                   NETWORK_UPDATES='rw_nus',
-                   GROUPS='rw_groups',
-                   MESSAGES='w_messages')
+                        BASIC_PROFILE='r_basicprofile',
+                        EMAIL_ADDRESS='r_emailaddress',
+                        CONTACT_INFO='rw_company_admin',
+                        W_SHARE='w_share')
 
 ENDPOINTS = enum('LinkedInURL',
                  PEOPLE='https://api.linkedin.com/v1/people',
